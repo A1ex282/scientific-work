@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.424,=C:\Users\dima_\Desktop\наука\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.866,=C:\Users\dima_\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.934,=C:\Users\dima_\Documents\Embarcadero\Studio\Projects\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.200,C:\Users\dima_\Desktop\наука\Unit2.pas=C:\Users\dima_\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.200,C:\Users\dima_\Desktop\наука\Unit2.dfm=C:\Users\dima_\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.599,=C:\Users\dima_\Desktop\наука\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.684,C:\Users\dima_\Desktop\наука\Unit1.dfm=C:\Users\dima_\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.271,=C:\Users\dima_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.896,=C:\Users\dima_\Desktop\наука\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.042,=C:\Users\dima_\Desktop\наука\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.672,C:\Users\dima_\Desktop\наука\Project1.dproj=C:\Users\dima_\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.684,C:\Users\dima_\Desktop\наука\Unit1.pas=C:\Users\dima_\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

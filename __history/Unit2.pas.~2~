@@ -1,0 +1,85 @@
+unit Unit2;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  VclTee.TeeGDIPlus, VCLTee.TeEngine, VCLTee.TeeProcs, VCLTee.Chart,
+  VCLTee.Series;
+
+type
+  TForm2 = class(TForm)
+    Panel1: TPanel;
+    ComboBox1: TComboBox;
+    Button1: TButton;
+    Chart1: TChart;
+    Series1: TFastLineSeries;
+    Edit1: TEdit;
+    procedure ComboBox1Change(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Edit1Change(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+  o:array [0..1] of array [0..8] of real;
+  u:array [0..1] of array [0..8] of real;
+  d:real ;
+const
+  a:array [0..1] of array [0..8] of real =( (1,2,3,4,5,6,7,8,9) ,
+                                             (  4,2,4,4,5,2,7,8,9) );
+  b:array [0..1] of array [0..8] of real =((56,41,432,4,24,5,67,343,54),
+                                             (56,41,432,4,24,5,67,343,54));
+  c:array [0..1] of array [0..8] of real =((23,12,54,6,43,23,87,98,23),
+                                             (23,12,54,6,43,23,87,98,23));
+
+implementation
+
+{$R *.dfm}
+
+uses Unit1;
+
+procedure TForm2.Edit1Change(Sender: TObject);
+begin
+  d:=StrToInt(Edit1.Text);
+end;
+
+procedure TForm2.ComboBox1Change(Sender: TObject);
+var
+  i, j : integer;
+begin
+  for i:=0 to 1 do
+  for j:=0 to 8 do
+    If ComboBox1.ItemIndex = 0 then  u[i,j]:= a[i,j];
+  for i:=0 to 1 do
+  for j:=0 to 8 do
+    If ComboBox1.ItemIndex = 1 then  u[i,j]:= b[i,j];
+  for i:=0 to 1 do
+  for j:=0 to 8 do
+    If ComboBox1.ItemIndex = 2 then  u[i,j]:= c[i,j];
+end;
+
+procedure TForm2.Button1Click(Sender: TObject);
+Var
+
+i, j : integer;
+begin
+Series1.Clear;
+   for i:=0 to 1 do
+   for j:=0 to 8 do
+    o[i,j]:=u[i,j]/d;
+  begin
+    for i:=0 to 1 do
+    for j:=0 to 8 do
+    Series1.Add(o[i,j]);
+  end;
+end;
+
+end.
+
+

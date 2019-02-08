@@ -1,0 +1,228 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Imaging.pngimage, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
+
+type
+  TForm3 = class(TForm)
+    ScrollBox1: TScrollBox;
+    Panel1: TPanel;
+    GroupBox1: TGroupBox;
+    CheckBox1: TCheckBox;
+    CheckBox2: TCheckBox;
+    CheckBox3: TCheckBox;
+    CheckBox4: TCheckBox;
+    GroupBox2: TGroupBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Image1: TImage;
+    GroupBox3: TGroupBox;
+    GroupBox4: TGroupBox;
+    GroupBox5: TGroupBox;
+    GroupBox6: TGroupBox;
+    GroupBox7: TGroupBox;
+    GroupBox8: TGroupBox;
+    GroupBox9: TGroupBox;
+    GroupBox10: TGroupBox;
+    Panel2: TPanel;
+    CheckBox5: TCheckBox;
+    CheckBox6: TCheckBox;
+    CheckBox7: TCheckBox;
+    CheckBox8: TCheckBox;
+    Label5: TLabel;
+    Label6: TLabel;
+    CheckBox9: TCheckBox;
+    CheckBox10: TCheckBox;
+    CheckBox11: TCheckBox;
+    CheckBox12: TCheckBox;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    CheckBox13: TCheckBox;
+    CheckBox14: TCheckBox;
+    CheckBox15: TCheckBox;
+    CheckBox16: TCheckBox;
+    CheckBox17: TCheckBox;
+    CheckBox18: TCheckBox;
+    CheckBox19: TCheckBox;
+    CheckBox20: TCheckBox;
+    CheckBox21: TCheckBox;
+    CheckBox22: TCheckBox;
+    CheckBox23: TCheckBox;
+    CheckBox24: TCheckBox;
+    CheckBox25: TCheckBox;
+    CheckBox26: TCheckBox;
+    CheckBox27: TCheckBox;
+    CheckBox28: TCheckBox;
+    Image2: TImage;
+    Label13: TLabel;
+    Label12: TLabel;
+    Label14: TLabel;
+    Label15: TLabel;
+    Label16: TLabel;
+    Label17: TLabel;
+    Label18: TLabel;
+    Edit5: TEdit;
+    Edit6: TEdit;
+    Edit7: TEdit;
+    Label19: TLabel;
+    Label20: TLabel;
+    Label21: TLabel;
+    Label22: TLabel;
+    Label23: TLabel;
+    Label24: TLabel;
+    Label25: TLabel;
+    Edit8: TEdit;
+    Edit9: TEdit;
+    Edit10: TEdit;
+    Edit11: TEdit;
+    Edit12: TEdit;
+    Button1: TButton;
+    Memo1: TMemo;
+    Button2: TButton;
+    procedure ScrollBox1MouseWheelDown(Sender: TObject; Shift: TShiftState; MousePos: TPoint; var Handled: Boolean);
+    procedure ScrollBox1MouseWheelUp(Sender: TObject; Shift: TShiftState;MousePos: TPoint; var Handled: Boolean);
+    procedure Edit1Change(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure Edit2Change(Sender: TObject);
+    procedure Edit3Change(Sender: TObject);
+    procedure Edit4Change(Sender: TObject);
+    procedure Edit5Change(Sender: TObject);
+    procedure CheckBox2Click(Sender: TObject);
+
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+t: integer;
+  Form3: TForm3;
+
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm3.Button1Click(Sender: TObject); {Печать ответа}
+begin
+memo1.Clear;
+Memo1.Text:= memo1.text+'Вы набрали '+FloatToStr(t)+' баллов из 31 бала';
+end;
+
+procedure TForm3.CheckBox2Click(Sender: TObject); {1 вопрос,2 ответ}
+begin
+if checkbox2.Checked = true then
+begin
+  t:=t+1;
+end;
+ if checkbox2.Checked = false then
+begin
+  t:=t+0;
+end;
+end;
+
+procedure TForm3.Edit1Change(Sender: TObject); {2 вопрос,1 ответ}
+var S: real;
+K: real;
+begin
+  S:=StrToInt(Edit1.Text);
+  K:=3;
+  if S=K then
+  begin
+    t:=t+1;
+  end;
+    if S<>K then
+  begin
+  t:=t+0;
+  end;
+end;
+
+procedure TForm3.Edit2Change(Sender: TObject); {2 вопрос,2 ответ}
+var S: real;
+K: real;
+begin
+  S:=StrToInt(Edit2.Text);
+  K:=5;
+  if S=K then
+  begin
+    t:=t+1;
+  end;
+    if S<>K then
+  begin
+  t:=t+0;
+  end;
+end;
+
+procedure TForm3.Edit3Change(Sender: TObject); {2 вопрос,3 ответ}
+var S: real;
+K: real;
+begin
+  S:=StrToInt(Edit3.Text);
+  K:=2;
+  if S=K then
+  begin
+    t:=t+1;
+  end;
+    if S<>K then
+  begin
+  t:=t+0;
+  end;
+end;
+
+procedure TForm3.Edit4Change(Sender: TObject); {2 вопрос,4 ответ}
+var S: real;
+K: real;
+begin
+  S:=StrToInt(Edit4.Text);
+  K:=11;
+  if S=K then
+  begin
+    t:=t+1;
+  end;
+    if S<>K then
+  begin
+  t:=t+0;
+  end;
+end;
+
+procedure TForm3.Edit5Change(Sender: TObject);{9 вопрос,1 ответ}
+var S: string;
+K: string;
+begin
+  S:=Edit4.Text;
+  K:='Б';
+  if S=K then
+  begin
+    t:=t+1;
+  end;
+    if S<>K then
+  begin
+  t:=t+0;
+  end;
+end;
+
+procedure Tform3.ScrollBox1MouseWheelDown(Sender: TObject; Shift: TShiftState; MousePos: TPoint; var Handled: Boolean);
+begin
+Scrollbox1.VertScrollBar.Position := Scrollbox1.VertScrollBar.Position + 15;
+end;
+
+procedure TForm3.ScrollBox1MouseWheelUp(Sender: TObject; Shift: TShiftState;MousePos: TPoint; var Handled: Boolean);
+begin
+Scrollbox1.VertScrollBar.Position:= Scrollbox1.VertScrollBar.Position-15;
+end;
+end.
+

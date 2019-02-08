@@ -1,0 +1,93 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 469
+  ClientWidth = 892
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 892
+    Height = 469
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 152
+    ExplicitTop = 96
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object ComboBox1: TComboBox
+      Left = 16
+      Top = 48
+      Width = 145
+      Height = 21
+      TabOrder = 0
+      Text = 'ComboBox1'
+      OnChange = ComboBox1Change
+      Items.Strings = (
+        #1057#1090#1072#1083#1100' 1 '
+        #1057#1090#1072#1083#1100' 2'
+        #1057#1090#1072#1083#1100' 3')
+    end
+    object Edit1: TEdit
+      Left = 16
+      Top = 88
+      Width = 121
+      Height = 21
+      TabOrder = 1
+      Text = 'Edit1'
+    end
+    object Chart1: TChart
+      Left = 232
+      Top = 144
+      Width = 400
+      Height = 250
+      Title.Text.Strings = (
+        'TChart')
+      View3D = False
+      TabOrder = 2
+      DefaultCanvas = 'TGDIPlusCanvas'
+      PrintMargins = (
+        15
+        19
+        15
+        19)
+      ColorPaletteIndex = 11
+      object Series1: TLineSeries
+        Brush.BackColor = clDefault
+        Pointer.InflateMargins = True
+        Pointer.Style = psRectangle
+        Pointer.Visible = True
+        XValues.Name = 'X'
+        XValues.Order = loAscending
+        YValues.Name = 'Y'
+        YValues.Order = loNone
+        Data = {
+          001900000000000000002C80400000000000C07C400000000000C07740000000
+          0000F07E400000000000A07E400000000000687A400000000000E07F40000000
+          0000087B400000000000E877400000000000C874400000000000C07240000000
+          0000F069400000000000F06E4000000000007067400000000000987240000000
+          000028794000000000004872400000000000F074400000000000087B40000000
+          0000807B400000000000F079400000000000A87B400000000000F07940000000
+          00008878400000000000E87740}
+      end
+    end
+    object Button1: TButton
+      Left = 232
+      Top = 46
+      Width = 75
+      Height = 25
+      Caption = 'Button1'
+      TabOrder = 3
+      OnClick = Button1Click
+    end
+  end
+end
