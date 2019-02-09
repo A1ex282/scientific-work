@@ -20,5 +20,20 @@ object Form1: TForm1
     Height = 433
     Align = alClient
     TabOrder = 0
+    object Button3: TButton
+      Left = 136
+      Top = 72
+      Width = 161
+      Height = 57
+      Caption = #1058#1077#1086#1088#1080#1103
+      Font.Charset = ARABIC_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnClick = Button3Click
+    end
   end
 end
